@@ -111,7 +111,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                           child: Text(
                             'SIGN UP',
-                            style: TextStyle(fontSize: 16 * scale),
+                            style: TextStyle(fontSize: 16 * scale, color: Colors.white),
                           ),
                         ),
                       ),
@@ -128,13 +128,6 @@ class SignupScreen extends StatelessWidget {
                         'assets/google.png',
                         scale,
                       ),
-                      SizedBox(height: spacing * 0.75),
-                      socialButton(
-                        'Continue with Apple ID',
-                        'assets/apple.png',
-                        scale,
-                      ),
-
                       SizedBox(height: spacing * 1.5),
                       Text(
                         'By continuing, you agree to our\nTerms and Conditions and have read our Privacy Policy.',
@@ -207,7 +200,8 @@ class SignupScreen extends StatelessWidget {
 
   Widget socialButton(String text, String iconPath, double scale) {
     return Container(
-      height: 45 * scale,
+      height: 55 * scale,
+      width: 270 * scale,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
         borderRadius: BorderRadius.circular(6),
@@ -217,7 +211,7 @@ class SignupScreen extends StatelessWidget {
         children: [
           Image.asset(iconPath, height: 20 * scale, width: 20 * scale),
           SizedBox(width: 10 * scale),
-          Text(text, style: TextStyle(fontSize: 14 * scale)),
+          Text(text, style: TextStyle(fontSize: 16 * scale)),
         ],
       ),
     );

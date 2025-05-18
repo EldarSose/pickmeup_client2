@@ -144,34 +144,25 @@ class LoginScreen extends StatelessWidget {
                       ),
                       child: Text(
                         'LOGIN',
-                        style: TextStyle(fontSize: 16 * scale),
+                        style: TextStyle(fontSize: 16 * scale, color: Colors.white),
                       ),
                     ),
                   ),
                   SizedBox(height: 20 * scale),
-
                   FittedBox(
-                    child: socialButton(
-                      'Continue with Facebook',
-                      'assets/facebook.png',
-                      scale,
+                      child: socialButton(
+                        'Continue with Facebook',
+                        'assets/facebook.png',
+                        scale,
                     ),
                   ),
                   SizedBox(height: 10 * scale),
                   FittedBox(
-                    child: socialButton(
-                      'Continue with Google',
-                      'assets/google.png',
-                      scale,
-                    ),
-                  ),
-                  SizedBox(height: 10 * scale),
-                  FittedBox(
-                    child: socialButton(
-                      'Continue with Apple ID',
-                      'assets/apple.png',
-                      scale,
-                    ),
+                      child: socialButton(
+                        'Continue with Google',
+                        'assets/google.png',
+                        scale
+                      ),
                   ),
                   SizedBox(height: 20 * scale),
                   Text(
@@ -221,18 +212,20 @@ class LoginScreen extends StatelessWidget {
 
   Widget socialButton(String text, String iconPath, double scale) {
     return Container(
-      height: 45 * scale,
+      height: 55 * scale,
+      width: 270 * scale,
       padding: EdgeInsets.symmetric(horizontal: 12 * scale),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(iconPath, height: 20 * scale, width: 20 * scale),
           SizedBox(width: 10 * scale),
-          Text(text, style: TextStyle(fontSize: 14 * scale)),
+          Text(text, style: TextStyle(fontSize: 16 * scale)),
         ],
       ),
     );
